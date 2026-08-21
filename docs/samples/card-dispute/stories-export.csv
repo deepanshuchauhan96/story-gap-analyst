@@ -1,0 +1,61 @@
+Issue key,Summary,Description,Sprint,Status,Labels
+CD-201,[DISPUTE] Member files a dispute from online banking,"As a member, I want to dispute a card transaction from online banking, so that I can get my money back.
+
+Acceptance Criteria:
+- Member selects a card transaction and a reason category
+- Member enters a description
+- The dispute is submitted successfully",Sprint 1,Done,req-card-dispute-management
+CD-202,[DISPUTE] Create dispute case with reference number,"As a member, I want each dispute to become a tracked case, so that I can follow its progress.
+
+Acceptance Criteria:
+- Submitting a dispute creates a case with a unique reference number
+- The case appears in the member's dispute list with its current status
+- Opening a case shows its history",Sprint 1,Done,req-card-dispute-management
+CD-203,[DISPUTE] Upload supporting documents,"As a member, I want to attach evidence to my dispute, so that my claim is supported.
+
+Acceptance Criteria:
+- Member can upload documents to a dispute
+- Uploaded documents are visible on the case",Sprint 1,Done,req-card-dispute-management
+CD-204,[DISPUTE] Agent files a dispute on behalf of a member,"As a member service agent, I want to file a dispute for a member over the phone, so that members without online access are served.
+
+Acceptance Criteria:
+- Agent can create a dispute from the agent console for a selected member
+- The dispute appears in the member's dispute list",Sprint 2,Done,req-card-dispute-management
+CD-205,[DISPUTE] Email notification on dispute submission,"As a member, I want an email when my dispute is submitted, so that I have a record.
+
+Acceptance Criteria:
+- On submission, an email is sent to the member's address on file
+- The email contains the case reference number",Sprint 2,Done,req-card-dispute-management
+CD-206,[DISPUTE] Enforce 60-day dispute window,"As the credit union, we only accept disputes within the regulatory window.
+
+Acceptance Criteria:
+- A transaction older than 60 days from its statement date cannot be selected for dispute
+- The member sees an explanation why the transaction is not disputable",Sprint 2,Done,req-card-dispute-management
+CD-207,[DISPUTE] Issue provisional credit,"As a member, I want provisional credit while my dispute is investigated.
+
+Acceptance Criteria:
+- Eligible disputes receive a provisional credit
+- The credit is visible in the member's account activity",Sprint 3,Done,req-card-dispute-management
+CD-208,[DISPUTE] Prevent duplicate disputes on a transaction,"As the credit union, we must not open two disputes for one transaction.
+
+Acceptance Criteria:
+- If a transaction already has an open dispute, filing another is blocked
+- The member sees a clear message with the existing case reference",Sprint 3,Done,req-card-dispute-management
+CD-209,[DISPUTE] Block card when reason is fraud,"As the credit union, we must stop further fraud on a compromised card.
+
+Acceptance Criteria:
+- When a dispute is filed with reason fraud/unauthorized, the card is blocked immediately",Sprint 3,In Progress,req-card-dispute-management
+CD-210,[DISPUTE] Analyst resolves a dispute,"As a dispute analyst, I want to resolve cases, so that members get an outcome.
+
+Acceptance Criteria:
+- Analyst can mark a case approved or denied
+- On approval the credit is made permanent",Sprint 4,To Do,req-card-dispute-management
+CD-211,[DISPUTE] Compliance report,"As Compliance, we need visibility of dispute handling.
+
+Acceptance Criteria:
+- A report of disputes can be generated",Sprint 4,To Do,req-card-dispute-management
+CD-212,[DISPUTE] Improve dispute list styling,"As a member, I want the dispute list to look clean and modern.
+
+Acceptance Criteria:
+- Dispute list uses the new design tokens
+- Status chips are color-coded",Sprint 4,To Do,req-card-dispute-management
