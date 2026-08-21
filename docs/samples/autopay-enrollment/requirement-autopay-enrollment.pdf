@@ -1,0 +1,32 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2153 >>
+stream
+BT /F1 10 Tf 13 TL 50 770 Td (Requirement: Auto-Pay Enrollment for Loans) Tj T* () Tj T* (Version 1.0 - Sponsor Digital Banking - Status Approved) Tj T* () Tj T* (#1. Business objective) Tj T* (Members miss loan payments because manual payment is easy to forget. We want members to enroll) Tj T* (in automatic) Tj T* (payments for their loans from online banking, with clear confirmation, safe controls, and a full) Tj T* (audit trail.) Tj T* () Tj T* (#2. Functional requirements) Tj T* (- FR-1 A member can enroll a loan in auto-pay from online banking: choose the funding account,) Tj T* (the amount type) Tj T* (  \(minimum due, fixed amount, or statement balance\), and the payment day of month.) Tj T* (- FR-2 After enrolling, the member sees a confirmation screen and receives a confirmation email) Tj T* (within) Tj T* (  15 minutes.) Tj T* (- FR-3 A member can edit or cancel an enrollment; edits and cancellations take effect from the) Tj T* (next payment) Tj T* (  cycle.) Tj T* () Tj T* (#3. Business rules) Tj T* (- BR-1 Only loans in good standing can be enrolled; loans in charge-off, bankruptcy, or more) Tj T* (than 30 days past) Tj T* (  due are not eligible, and the member sees an explanation.) Tj T* (- BR-2 A fixed amount must be greater than or equal to the minimum due; otherwise the enrollment) Tj T* (is rejected) Tj T* (  with a clear message.) Tj T* (- BR-3 If the payment day falls on a weekend or federal holiday, the payment is processed on the) Tj T* (next business) Tj T* (  day.) Tj T* () Tj T* (#4. Non-functional requirements) Tj T* (- NFR-1 Every enrollment, edit, and cancellation is audited with member, date/time, and channel;) Tj T* (audit records) Tj T* (  are retained for 7 years.) Tj T* (- NFR-2 Members can manage only their own enrollments. A member service agent may enroll on a) Tj T* (member's behalf) Tj T* (  only with the "Payments" permission, and the audit records that it was agent-assisted.) Tj T* (- NFR-3 If the core banking system is unavailable at enrollment, the request is queued and) Tj T* (retried, and the) Tj T* (  member sees a "pending" status rather than an error.) Tj T* () Tj T* ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002446 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2516
+%%EOF

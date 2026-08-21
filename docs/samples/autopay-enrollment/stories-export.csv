@@ -1,0 +1,16 @@
+Issue key,Summary,Description,Sprint,Status,Labels
+PF-101,[AUTOPAY] Enroll a loan in auto-pay,"As a member, I want to enroll my loan in auto-pay from online banking, so that I never miss a payment.
+
+Acceptance Criteria:
+- Member selects a loan and a funding account
+- Member picks the payment day of month
+- Enrollment is saved and a confirmation screen is shown",Sprint 1,Done,req-autopay-enrollment
+PF-102,[AUTOPAY] Validate fixed payment amount,"As a member, I want my fixed auto-pay amount validated, so that my payment always covers the minimum due.
+
+Acceptance Criteria:
+- If the fixed amount is below the minimum due, the enrollment is rejected",Sprint 1,Done,req-autopay-enrollment
+PF-103,[AUTOPAY] Cancel an auto-pay enrollment,"As a member, I want to cancel my auto-pay enrollment, so that I control my payments.
+
+Acceptance Criteria:
+- Member can cancel an active enrollment from online banking
+- A cancelled enrollment makes no further payments",Sprint 2,In Progress,req-autopay-enrollment
