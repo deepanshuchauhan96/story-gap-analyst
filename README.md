@@ -17,6 +17,8 @@ reproducible: reviewers argue with a specific checkpoint, not with a number.
 .github/prompts/analyze-gaps.prompt.md       /analyze-gaps requirement=<page name or file> stories=<label or CSV>
 .github/gap-agent/gap-analysis-method.md     the completeness scoring method (checkpoints, 1.0/0.5/0.0)
 .vscode/mcp.json                             Atlassian (Rovo) MCP server — the only dependency, and it is optional
+scripts/xlsx-to-csv.js                       .xlsx -> CSV converter (dependency-free Node, no installs)
+scripts/extract-text.js                      .pdf / .docx -> text converter (dependency-free Node, no installs)
 docs/samples/                                a sample requirement (.md) + a deliberately incomplete Jira CSV export
 docs/examples/1-first-audit-28pct/           real output: first audit, coverage 28%
 docs/examples/2-after-fixes-100pct/          real output: same requirement after fixes were applied, 100%
@@ -34,8 +36,12 @@ and runs the audit. Convention: one label per requirement (`req-<slug>`), applie
 ```
 /analyze-gaps requirement=docs/samples/requirement-member-address-change.md stories=docs/samples/stories-export.csv
 ```
-The requirement is a local `.md`/`.txt`; the stories are a Jira CSV export (filter the issue navigator by the
-requirement label, Export → CSV; needs at least Issue key, Summary, Description; `.xlsx` is not readable — use CSV).
+The requirement is a local `.md`, `.txt`, **`.pdf` or `.docx`**; the stories are a Jira export as **`.csv` or
+`.xlsx`** (filter the issue navigator by the requirement label, then Export; needs at least Issue key, Summary,
+Description). Binary formats are handled by two dependency-free Node scripts in `scripts/` — the agent runs them
+itself in the terminal (VS Code shows an approval prompt for each command; the agent is instructed to run nothing
+but these two scripts). Limits: scanned/image PDFs have no text layer — attach those in chat (Copilot vision) or
+OCR them; `.doc` (old Word) is not supported — save as `.docx`.
 
 ## Setup (~10 min)
 1. Copy `.github/` and `.vscode/` into the root of the repo where the team runs Copilot (merge `mcp.json` if one
