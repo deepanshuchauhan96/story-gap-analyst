@@ -1,0 +1,13 @@
+Issue key,Summary,Description
+SCRUM-7,[GAP-TEST] Update member mailing address,"As a member service agent, I want to update a member's mailing address from the member profile page, so that statements go to the right place.
+
+Acceptance Criteria:
+- Agent opens the member profile and edits the address fields
+- New address is saved on the member record
+- A success message is shown"
+SCRUM-8,[GAP-TEST] Validate address with USPS before save,"As a member service agent, I want the entered address to be checked against USPS, so that we store deliverable addresses.
+
+Acceptance Criteria:
+- On save, the address is sent to the USPS validation service
+- If USPS returns a standardized address, the agent can accept it
+- The accepted address is stored on the member record"
