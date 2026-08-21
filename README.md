@@ -43,6 +43,19 @@ itself in the terminal (VS Code shows an approval prompt for each command; the a
 but these two scripts). Limits: scanned/image PDFs have no text layer — attach those in chat (Copilot vision) or
 OCR them; `.doc` (old Word) is not supported — save as `.docx`.
 
+## Sprint-based analysis
+A sprint is just another scope filter, so both modes support it:
+- Connected: `stories='labels = req-member-address-change AND sprint = "Sprint 12"'` (any JQL works)
+- File mode: filter the issue navigator by sprint before exporting, and keep the **Sprint column** in the export.
+
+Two report shapes — say which you want in the prompt (default is cumulative):
+- **Sprint slice** — only that sprint's stories; the % is that sprint's *contribution*, not requirement
+  completeness.
+- **Cumulative snapshot** — all stories to date, rows tagged by sprint, saved under
+  `docs/gap-analysis/<slug>/sprint-<name>/`. Because each sprint-end run is committed, the agent reads earlier
+  snapshots and prints a trend: `Sprint 10: 28% → Sprint 11: 61% → Sprint 12: 100%` — the requirement's
+  convergence over time. Run it as a sprint-end ritual (or from CI on a schedule) and the trend builds itself.
+
 ## Setup (~10 min)
 1. Copy `.github/` and `.vscode/` into the root of the repo where the team runs Copilot (merge `mcp.json` if one
    exists; keep the server key `atlassian`). File mode needs nothing else — skip step 2.

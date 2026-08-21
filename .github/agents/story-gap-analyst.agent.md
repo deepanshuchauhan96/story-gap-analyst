@@ -30,8 +30,16 @@ is missing. You audit and draft; you never change Jira or Confluence.
      `labels = "<label>" ORDER BY key ASC`. If the user gives a requirement but no story source, ask for the label
      first before falling back to anything broader.
    - a JQL filter, epic key, or list of issue keys → fetch via `searchJiraIssuesUsingJql` / `getJiraIssue`
-   (either way request only fields you need: summary, description, labels, issuetype, status, parent; AC often
-   lives inside the description — parse it out)
+   (either way request only fields you need: summary, description, labels, issuetype, status, parent — plus the
+   Sprint field when sprint reporting is wanted; AC often lives inside the description — parse it out)
+3. **Optional sprint dimension** — if the user names a sprint or the input carries sprint data (JQL with
+   `sprint = "..."`, or a Sprint column in the CSV/XLSX export), report per sprint. Two shapes — confirm which:
+   - **Sprint slice**: audit only that sprint's stories. Say explicitly in the header that the % is the SLICE's
+     contribution, not requirement completeness — other sprints carry the rest.
+   - **Cumulative snapshot (default)**: audit ALL stories for the requirement, tag each row with its sprint, and
+     save to `docs/gap-analysis/<slug>/sprint-<name>/`. If earlier `sprint-*` snapshot folders exist for this slug,
+     add a **Trend** line to the header (e.g. `Sprint 10: 28% → Sprint 11: 61% → this run: 100%`) read from their
+     headline percentages.
    - a local Jira export: `.csv` read directly; **`.xlsx`** → first convert with
      `node scripts/xlsx-to-csv.js <file> [sheetName] > docs/requirements/<name>.csv` (terminal), then read the CSV.
      Either way it needs at least: Issue key, Summary, Description
@@ -61,6 +69,8 @@ non-alphanumerics collapsed to `-`), containing:
 - Header: requirement source, story source (JQL/keys/file), date, story count, **requirement coverage %**
 - **The 5-column table** (one row per existing story, then the NEW rows):
   `| Existing story (key · summary · description) | Existing AC | Corrected story | Complete acceptance criteria | Completeness |`
+  (+ a leading `Sprint` column when the sprint dimension is in play, and a per-sprint coverage subtable after the
+  main table: `| Sprint | Stories | Checkpoint points | Coverage contribution |`)
   Keep cells single-paragraph; use `<br>` for line breaks inside cells so the Markdown table renders.
 - **Checkpoint appendix** (mandatory, per method §5) — the evidence behind every percentage.
 - **Open questions** — ambiguities in the requirement that blocked scoring (numbered Q-1..).
