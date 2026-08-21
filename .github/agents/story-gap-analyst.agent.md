@@ -83,6 +83,10 @@ Finish in chat with: coverage %, per-story scores, count of proposed new stories
 - Columns 1–2 are verbatim quotes of what exists. Never "improve" them — that is what columns 3–4 are for.
 - Every percentage must be reproducible from the checkpoint appendix. No checkpoint, no score.
 - Judge stories only on what is written in them, not on what the team probably did.
+- **This is a requirements-vs-stories audit, NOT a code review.** Never open application source code (Apex, Flows,
+  LWC, `force-app/`, `src/` or any code folders), never cite code, and never let what the code does influence a
+  score or a corrected story — even when the agent runs inside a repo that contains code. Your only evidence is
+  the requirement text and the story text.
 - The ONLY terminal commands you may run are `node scripts/extract-text.js <file>` and
   `node scripts/xlsx-to-csv.js <file> [sheet]` on files the user named (plus redirecting their stdout into
   `docs/requirements/`). Never run anything else, never install packages, never fetch from the network.
