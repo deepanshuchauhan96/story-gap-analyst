@@ -1,0 +1,43 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Length 2868 >>
+stream
+BT /F1 10 Tf 13 TL 50 770 Td (Requirement: Card Dispute Management) Tj T* () Tj T* (Version 1.2 - Sponsor Card Services & Compliance - Status Approved) Tj T* () Tj T* (#1. Business objective) Tj T* (Members currently file card disputes by phone only, and tracking is manual. Compliance risk is) Tj T* (growing because) Tj T* (Regulation E deadlines are tracked in spreadsheets. We want end-to-end dispute intake, tracking,) Tj T* (provisional) Tj T* (credit, and resolution in the member portal and agent console, with the regulatory clock) Tj T* (enforced by the system.) Tj T* () Tj T* (#2. Functional requirements) Tj T* (- FR-1 Dispute intake \(member\). A member can file a dispute from online banking: select one or) Tj T* (more card) Tj T* (  transactions, choose a reason category \(fraud/unauthorized, duplicate charge, wrong amount,) Tj T* (goods not received,) Tj T* (  other\), enter a description, and upload supporting documents \(PDF or JPG, up to 5 files, 10 MB) Tj T* (each\).) Tj T* (- FR-2 Case creation. Each dispute creates a case with a unique reference number. The member) Tj T* (sees all their) Tj T* (  disputes in a list with current status and can open a case to see its history.) Tj T* (- FR-3 Dispute intake \(agent\). A member service agent can file a dispute on a member's behalf) Tj T* (from the agent) Tj T* (  console; the channel \(phone, branch, online\) is recorded on the case.) Tj T* (- FR-4 Status notifications. The member is notified at submission, provisional credit, request-) Tj T* (for-information,) Tj T* (  and resolution - by email and by push notification, according to the member's notification) Tj T* (preferences.) Tj T* (- FR-5 Provisional credit. For eligible debit-card disputes, provisional credit is issued within) Tj T* (10 business) Tj T* (  days of intake. If the dispute is denied, the provisional credit is reversed with at least 5) Tj T* (business days') Tj T* (  advance notice to the member.) Tj T* (- FR-6 Resolution. An analyst resolves a case as approved \(credit made permanent\) or denied. A) Tj T* (denial produces) Tj T* (  a letter stating the reason, and the member may request copies of the evidence relied upon.) Tj T* () Tj T* (#3. Business rules) Tj T* (- BR-1 A transaction can be disputed only within 60 days of the statement date on which it first) Tj T* (appeared.) Tj T* (- BR-2 The same transaction cannot have two open disputes \(duplicate prevention with a clear) Tj T* (message\).) Tj T* (- BR-3 Reason category is mandatory; a description is mandatory when the reason is "other".) Tj T* (- BR-4 If the reason is fraud/unauthorized, the card is blocked immediately and a replacement) Tj T* (card is offered.) Tj T* (- BR-5 Disputes under $25 are auto-approved as a write-off, unless the member has had more than) Tj T* (3 disputes in) Tj T* (  the last 90 days.) Tj T* () Tj T* ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 3 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 981 >>
+stream
+BT /F1 10 Tf 13 TL 50 770 Td (#4. Non-functional requirements) Tj T* (- NFR-1 Audit. Every action on a case \(create, update, credit, reverse, resolve\) is audited with) Tj T* (user,) Tj T* (  date/time, and channel; audit records are retained for 7 years.) Tj T* (- NFR-2 Regulatory clock. Intake timestamps drive the Regulation E deadlines; a compliance) Tj T* (dashboard flags) Tj T* (  cases at risk of breaching the 10-business-day provisional-credit deadline.) Tj T* (- NFR-3 Permissions. Members see only their own disputes. Agents require the "Disputes") Tj T* (permission to file on) Tj T* (  behalf of a member; the fraud queue is visible only to the fraud team.) Tj T* (- NFR-4 Availability. If the case system is unavailable, intake requests are queued; the member) Tj T* (receives their) Tj T* (  reference number within 24 hours.) Tj T* (- NFR-5 Reporting. A monthly report of dispute volume, aging, and outcomes is produced for) Tj T* (Compliance.) Tj T* () Tj T* ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 7 0 R >> >> >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000003041 00000 n 
+0000003167 00000 n 
+0000004199 00000 n 
+0000004325 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4395
+%%EOF

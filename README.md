@@ -19,7 +19,10 @@ reproducible: reviewers argue with a specific checkpoint, not with a number.
 .vscode/mcp.json                             Atlassian (Rovo) MCP server — the only dependency, and it is optional
 scripts/xlsx-to-csv.js                       .xlsx -> CSV converter (dependency-free Node, no installs)
 scripts/extract-text.js                      .pdf / .docx -> text converter (dependency-free Node, no installs)
-docs/samples/                                a sample requirement (.md) + a deliberately incomplete Jira CSV export
+docs/samples/autopay-enrollment/             small test kit: requirement (.md + real .pdf), 3 gapped stories (.csv + .xlsx)
+docs/samples/card-dispute/                   bulk test kit: large Reg-E-flavored requirement (.md + 2-page .pdf),
+                                             12 stories across 4 sprints (.csv + .xlsx), mixed quality incl. a
+                                             no-coverage story
 docs/examples/1-first-audit-28pct/           real output: first audit, coverage 28%
 docs/examples/2-after-fixes-100pct/          real output: same requirement after fixes were applied, 100%
 ```
